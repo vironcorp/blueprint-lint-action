@@ -1,0 +1,17 @@
+name: "Velocity - blueprint-lint-action"
+description: "Lint a blueprint file"
+author: "Velocity"
+inputs:
+  velocity-token:
+    required: true
+    description: "veloctl authentication token"
+  file-name:
+    required: true
+    description: "the blueprint file name"
+  version:
+    required: false
+    description: "specific veloctl version (default: latest)"
+    default: "latest"
+runs:
+  using: "node16"
+  main: "dist/index.js"
